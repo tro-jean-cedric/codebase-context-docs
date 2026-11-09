@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Analyzes a codebase and writes a lean CLAUDE.md plus .claude/docs/ reference files (architecture, testing, build/deploy, data model, API).",
   "author": { "name": "tro-jean-cedric" },
-  "homepage": "https://github.com/tro-jean-cedric/claude-skills",
-  "repository": "https://github.com/tro-jean-cedric/claude-skills",
+  "homepage": "https://github.com/tro-jean-cedric/codebase-context-docs",
+  "repository": "https://github.com/tro-jean-cedric/codebase-context-docs",
   "license": "MIT",
   "keywords": ["claude-md", "documentation", "onboarding", "agents-md"]
 }

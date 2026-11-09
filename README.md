@@ -1,6 +1,6 @@
-# claude-skills
+# codebase-context-docs
 
-Claude Code skills, packaged as a plugin marketplace.
+The `codebase-context-docs` Claude Code skill, packaged as a plugin marketplace.
 
 ## codebase-context-docs
 
@@ -17,16 +17,16 @@ or "get up to speed on this repo".
 ### Claude Code (recommended — gets updates)
 
 ```
-/plugin marketplace add tro-jean-cedric/claude-skills
-/plugin install codebase-context-docs@tro-skills
+/plugin marketplace add tro-jean-cedric/codebase-context-docs
+/plugin install codebase-context-docs@codebase-context-docs
 ```
 
-Update later with `/plugin marketplace update tro-skills`.
+Update later with `/plugin marketplace update codebase-context-docs`.
 
 ### Any agent, via the skills CLI
 
 ```bash
-npx skills add tro-jean-cedric/claude-skills
+npx skills add tro-jean-cedric/codebase-context-docs
 ```
 
 ### Manual
