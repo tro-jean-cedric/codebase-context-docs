@@ -1,0 +1,72 @@
+{
+  "skill_name": "codebase-context-docs",
+  "evals": [
+    {
+      "id": 0,
+      "name": "python-library-flask",
+      "prompt": "I just inherited maintenance on the Flask repo checked out at /tmp/repos/flask (use the workspace bash tool to reach it). Generate a CLAUDE.md at the repo root plus whatever supporting docs make sense so that Claude actually knows its way around this codebase instead of re-exploring it every session.",
+      "expected_output": "CLAUDE.md under 150 lines with overview/tech stack/structure/commands/additional-docs index, plus .claude/docs/architectural_patterns.md and at least one of testing_strategy.md / build_and_deploy.md. Commands must match pyproject.toml and CI. file:line references, no pasted code blocks of source.",
+      "files": [],
+      "assertions": [
+        "CLAUDE.md exists at the repo root and is under 150 lines",
+        "Supporting deep-dive docs are placed under .claude/docs/",
+        "CLAUDE.md has an 'Additional Documentation' style index that lists every doc file created",
+        "Each index entry says WHEN to read the doc, not merely what it contains",
+        "CLAUDE.md contains no source-code snippets (fenced blocks, if any, are shell commands only)",
+        "Build/test/lint commands in CLAUDE.md all exist in the project's manifest, task runner, or CI config",
+        "A narrow single-file/single-test run command is given, not only the full suite",
+        "Deep-dive docs anchor claims with file:line references instead of pasted code",
+        "No code-formatting or style guidance (indentation, quotes, line length, import ordering, naming case)",
+        "architectural_patterns.md (or equivalent) exists and each documented pattern cites at least 2 distinct files",
+        "A project purpose/WHY section explains what the project is for, beyond restating the tech stack",
+        "Directory listing explains the purpose of each top-level directory rather than naming it",
+        "No data_model.md is invented for a project with no persistence layer"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "ts-monorepo-hono",
+      "prompt": "generate a claude.md for the repo at /tmp/repos/hono (reach it with the workspace bash tool). keep it SHORT \u2014 the one I have on another project is like 400 lines and it eats my context window every single turn. put the deep stuff somewhere else if you need to.",
+      "expected_output": "CLAUDE.md well under 150 lines that indexes into .claude/docs/ rather than inlining detail. Correct identification of the pnpm/vitest/tsdown toolchain and the middleware/helper/adapter structure. architectural_patterns.md documenting patterns evidenced across multiple files.",
+      "files": [],
+      "assertions": [
+        "CLAUDE.md exists at the repo root and is under 150 lines",
+        "Supporting deep-dive docs are placed under .claude/docs/",
+        "CLAUDE.md has an 'Additional Documentation' style index that lists every doc file created",
+        "Each index entry says WHEN to read the doc, not merely what it contains",
+        "CLAUDE.md contains no source-code snippets (fenced blocks, if any, are shell commands only)",
+        "Build/test/lint commands in CLAUDE.md all exist in the project's manifest, task runner, or CI config",
+        "A narrow single-file/single-test run command is given, not only the full suite",
+        "Deep-dive docs anchor claims with file:line references instead of pasted code",
+        "No code-formatting or style guidance (indentation, quotes, line length, import ordering, naming case)",
+        "architectural_patterns.md (or equivalent) exists and each documented pattern cites at least 2 distinct files",
+        "A project purpose/WHY section explains what the project is for, beyond restating the tech stack",
+        "Directory listing explains the purpose of each top-level directory rather than naming it",
+        "CLAUDE.md is notably compact (under 100 lines), honoring the user's explicit request to keep it short"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "go-api-app-realworld",
+      "prompt": "/tmp/repos/gin-realworld (get at it via the workspace bash tool) \u2014 set up project context docs for Claude on this one. it's a go api, and I care most about it understanding the data model and the endpoints.",
+      "expected_output": "CLAUDE.md under 150 lines, plus .claude/docs/ containing architectural_patterns.md, data_model.md and api_reference.md given the user's stated emphasis. Correct go commands, correct identification of gorm models and gin router registration, with file:line anchors.",
+      "files": [],
+      "assertions": [
+        "CLAUDE.md exists at the repo root and is under 150 lines",
+        "Supporting deep-dive docs are placed under .claude/docs/",
+        "CLAUDE.md has an 'Additional Documentation' style index that lists every doc file created",
+        "Each index entry says WHEN to read the doc, not merely what it contains",
+        "CLAUDE.md contains no source-code snippets (fenced blocks, if any, are shell commands only)",
+        "Build/test/lint commands in CLAUDE.md all exist in the project's manifest, task runner, or CI config",
+        "A narrow single-file/single-test run command is given, not only the full suite",
+        "Deep-dive docs anchor claims with file:line references instead of pasted code",
+        "No code-formatting or style guidance (indentation, quotes, line length, import ordering, naming case)",
+        "architectural_patterns.md (or equivalent) exists and each documented pattern cites at least 2 distinct files",
+        "A project purpose/WHY section explains what the project is for, beyond restating the tech stack",
+        "Directory listing explains the purpose of each top-level directory rather than naming it",
+        "Both data_model.md and api_reference.md exist, matching the user's stated emphasis on data model and endpoints",
+        "The data model doc identifies the relationships between the GORM models with file:line anchors"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "tro-skills",
+  "owner": { "name": "tro-jean-cedric" },
+  "metadata": { "description": "Claude Code skills by tro-jean-cedric" },
+  "plugins": [
+    {
+      "name": "codebase-context-docs",
+      "source": "./plugins/codebase-context-docs",
+      "description": "Generate a lean CLAUDE.md (<150 lines) plus .claude/docs/ deep-dive references using progressive disclosure.",
+      "version": "1.0.0",
+      "category": "documentation"
+    }
+  ]
+}
